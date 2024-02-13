@@ -34,30 +34,28 @@ modified_by:
 
 ## Getting Started after Deployment
 
-After Passbolt is deployed, the installation screen will be available at `http://example.com/install/`. Credentials are saved to `/root/.credentials`.
+After Passbolt is deployed, the installation screen will be available at `http://<example.com>/install/`. Credentials are saved to `/root/.credentials`.
 
 Please visit [Passbolt Installation Documentation](https://help.passbolt.com/hosting/install/ce/ubuntu/ubuntu.html) for information on how to set up and configure Passbolt.
 
 ### Database Configuration Options
-* Database connection url - Use `localhost` if using the locally configured mysql database. Otherwise, add your database connection string here.
-* Username, Password, Database name - These are located at `/root/.credentials`
+* **Database connection url**: Use `localhost` if using the locally configured mysql database. Otherwise, add your database connection string here.
 
 ### Email Configuration
-Postfix is installed as part of the Marketplace App, allowing you to send mail. To send a test email through the Email Configuration screen, use the following:
-* Sender name - root
-* Sender email - root@<yourdomain.com>
-* SMTP host - Add your server hostname
-* Use TLS? - No
-* Port - 25
-* Authentication method - None
-* Client - client
+
+Postfix is installed as part of the Marketplace App, allowing you to send a test email. To send a test email through the Email Configuration screen, use the following:
+* **Sender name**: root
+* **Sender email**: root@<example.com>
+* **SMTP host**: Add your server hostname
+* **Use TLS?**: No
+* **Port**: 25
+* **Authentication method**: None
+* **Client**: client
 
 {{< note >}}
-It is strongly recommended that you follow the best practices for configuring a mail server to ensure mail deliverability. Please see the [Running a Mail Server](https://www.linode.com/docs/guides/running-a-mail-server/) guide for more information.
-{{< /note >}}
+To make the most out of Passbolt you need a working email setup for email notifications (e.g. - account registration, password recovery and other critical notifications). For more information on setting this up, see the [Configure Email Providers](https://help.passbolt.com/configure/email/setup) page on Passbolt's website.  
 
-{{< note >}}
-**Mail Server Settings:** To make the most out of Passbolt you need a working email setup for email notifications (e.g. - account registration, password recovery and other critical notifications). For more information on setting this up, see the [Configure Email Providers](https://help.passbolt.com/configure/email/setup) page on Passbolt's website.  
+Regardless of how you configure your mail server, it is strongly recommended that you follow the best practices to ensure mail deliverability. Please see the [Running a Mail Server](https://www.linode.com/docs/guides/running-a-mail-server/) guide for more information.
 {{< /note >}}
 
 {{< content "marketplace-update-note-shortguide">}}
